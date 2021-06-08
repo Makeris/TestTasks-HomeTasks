@@ -1,0 +1,245 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    background-image: url(assets/5-space.jpg);
+    background-repeat: no-repeat;
+
+}
+
+.space {
+    /* background-color: black;
+    height: 400px; */
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 300px;
+    position: relative;
+}
+
+.earth {
+    width: 150px;
+    height: 150px;
+    background-color: orange;
+    border-radius: 50%;
+    margin: 0 auto;
+    position: absolute;
+    left: 38%;
+    z-index: 2;
+    
+
+}
+.orbits {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 28px;
+    left: 25%;
+
+}
+
+/* .orbit {
+
+    margin: 0 auto;
+} */
+
+.orbit_left {
+    order: 1;
+}
+
+.orbit_top_right {
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    /* border-right: 1px solid black; */
+    border-top-left-radius: 100%;
+    border-top-right-radius: -100%;
+    height: 50px;
+    width: 150px;
+    z-index: 1;
+}
+
+.orbit_bottom_right {
+    border-bottom: 1px solid white;
+    border-left: 1px solid white;
+    /* border-right: 1px solid black; */
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: -100%;
+
+    height: 50px;
+    width: 150px;
+    position: relative;
+    z-index: 3;
+
+}
+.orbit_top_left {
+    border-top: 1px solid white;
+    /* border-left: 1px solid black; */
+    border-right: 1px solid white;
+    border-top-left-radius: -100%;
+    border-top-right-radius: 100%;
+    height: 50px;
+    width: 150px;
+    z-index: 1;
+}
+
+.orbit_bottom_left {
+    border-bottom: 1px solid white;
+    /* border-left: 1px solid black; */
+    border-right: 1px solid white;
+    border-bottom-left-radius: -100%;
+    border-bottom-right-radius: 100%;
+
+    height: 50px;
+    width: 150px;
+    position: relative;
+    z-index: 3;
+
+}
+
+.moon {
+
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color:#F0F0F0;
+    position: absolute;
+    top: 42px;
+    right: 154px;
+    animation: orbit_fly;
+    /* animation-timing-function: ease-in; */
+    animation-timing-function: linear;
+    
+    animation-duration: 5s;
+    animation-direction: normal;
+    /* animation-iteration-count: infinite; */
+    z-index: 0;
+    
+    /* animation-fill-mode: forwards; */
+    
+}
+
+
+@keyframes orbit_fly {
+
+    0% {
+        top: 42px;
+        right: 154px;
+        z-index: 0;
+    }
+    5% {
+        top: 25px;
+        right: 186px;
+        
+        background: linear-gradient(to right,#A9A9A9 20%, #979797 );
+    }
+    10% {
+        top: 21px;
+        right: 201px;
+        
+        background: linear-gradient(to right,#A9A9A9 20%, #C7C7C7 );;
+    }
+    15% {
+        top: 16px;
+        right: 333px;
+        
+        background: linear-gradient(to right,#E4E4E4, #C7C7C7 );
+    }
+    20% {
+        top: 21px;
+        right: 364px;
+        
+        background: linear-gradient(to right#A9A9A9 10%, #C7C7C7 );
+        
+    }
+    25% {
+        top: 31px;
+        right: 394px;
+        
+        background: linear-gradient(to right,#A9A9A9 20%, #C7C7C7 );
+    }
+    30% {
+        top: 53px;
+        right: 426px;
+        z-index: 3;
+        background-color: #5F5F5F;
+        background: linear-gradient(to right,#A9A9A9 30%, #C7C7C7 );
+
+    }
+    35% {
+        top: 75px;
+        right: 426px;
+        /* z-index: 4; */
+        background: linear-gradient(to right,#5F5F5F, #A9A9A9 40% );
+    }
+    40% {
+        top: 86px;
+        right: 411px;
+        background: linear-gradient(to right,#A9A9A9 30%, #5F5F5F );
+        
+    }
+    45% {
+        top: 97px;
+        right: 394px;
+        background: linear-gradient(to left,#414141 40%, #5F5F5F );
+    }
+    /* 49% {
+        z-index: 1;
+    } */
+
+    50% {
+        top: 103px;
+        right: 365px;
+        background: linear-gradient(to right,#5F5F5F 70%, #979797 );
+        
+    }
+    
+    55% {
+        top: 109px;
+        right: 333px;
+        background: linear-gradient(to right,#5F5F5F 80%, #888888 );
+        
+    }
+    60% {
+        top: 113px;
+        right: 298px;
+        background: linear-gradient(to left,#5F5F5F 80%, #979797 );
+        
+        
+    }
+    65% {
+        top: 112px;
+        right: 262px;
+        z-index: 10;
+        background: linear-gradient(to left,#5F5F5F 80%, #888888 );
+    }
+    70% {
+        top: 103px;
+        right: 199px;
+        background: linear-gradient(to left,#5F5F5F 80%, #979797 );
+    }
+    75% {
+        top: 87px;
+        right: 157px;
+        background: linear-gradient(to left,#5F5F5F 80%, #979797 );
+    }
+    80% {
+        top: 64px;
+        right: 138px;
+        background: linear-gradient(to left,#A9A9A9 20%, #C7C7C7 );
+    }
+    
+    90% {
+        top: 55px;
+        right: 141px;
+    }
+   
+    100% {
+        top: 42px;
+        right: 154px;
+        background: linear-gradient(to left,#A9A9A9 20%, #C7C7C7 );
+    }
+
+}

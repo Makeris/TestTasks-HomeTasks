@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+        body {
+            background-color:   #E7E7E7;
+        }
+        *{
+            box-sizing: border-box;
+        }
+        .square {
+            width: 300px;
+            height: 300px;
+            background-color: purple;
+            margin: 0 auto;
+            border: 5px solid #000;
+        }
+
+
+        .secret {
+            width: 300px;
+            height: 300px;
+            background-color: lime;
+            margin: 0 auto;
+            border: 5px solid #000;
+            margin-top: 100px;
+            box-sizing: content-box;
+
+
+        }
+        .block_text {
+            font-size: 20px;
+            text-align: center;
+            line-height: 300px;
+            color: yellow;
+        }
+
+        .block_text::selection {
+            color: transparent;
+        }
+
+        .main {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 10%;
+            margin-top: 200px;
+            margin-bottom: 200px;
+        }
+
+        .main_item {
+            width: 20%;
+            height: 500px;
+            /* background-color: lightslategrey; */
+            border: 1px solid #000;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            
+
+        }
+
+        ol {
+            width: 200px;
+            margin: 0 auto;
+            font-size: 20px;
+        }
+
+
+    </style>
+<!-- 1 task -->
+<div class="square"></div>
+
+<!-- 1 task -->
+
+
+
+
+<!-- 2 task -->
+
+
+
+<div class="secret">
+    <div class="block_text">I have a secret ^)</div>
+</div>
+
+
+
+<!-- 2 task -->
+
+
+
+<!-- task3 -->
+    <div class="main">
+        <div class="main_item"></div>
+        <div class="main_item second"></div>
+        <div class="main_item third"></div>
+    </div>
+
+<!-- task3 -->
+
+
+
+
+
+
+<!-- 4 task -->
+
+    <ol>
+        <li class="color_red">Red</li>
+        <li class="color_green">Green</li>
+        <li class="color_blue">Blue</li>
+        <li class="color_yellow">Yellow</li>
+        <li class="color_orange">Orange</li>
+        <li class="color_gray">Gray</li>
+    </ol>
+    
+
+
+
+    <script src="main.js"></script>
+</body>
+</html>

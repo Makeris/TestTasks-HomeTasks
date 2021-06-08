@@ -1,0 +1,298 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "nums";
+    src: url(fonts/FontsFree-Net-DS-DIGIB-2.ttf);
+}
+
+
+
+body {
+    background-color: black;
+    padding: 10px;
+    padding-top: 50px;
+    font-family: "nums";
+    
+}
+
+.section_time {
+    padding: 30px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    height: 250px;
+    color: #067092;
+    justify-content: center;
+    border: 1px solid #00F3FF;
+    
+}
+
+.date {
+    display: flex;
+    /* justify-content: space-between; */
+    justify-content: center;
+    width: 20%;
+    font-size: 55px;
+    /* background-color: white; */
+    margin: 0 auto;
+    position: relative;
+    font-family: "nums";
+    
+    
+
+   
+}
+
+
+
+.date_item {
+    
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+.time {
+    display: flex;
+    justify-content: space-between;
+    
+    font-size: 80px;
+    margin: 0 auto;
+    font-family: "nums";
+}
+
+.time_item {
+    
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+/* ////////////////////////////// */
+
+
+.second_timer {
+    /* background-color: #fff; */
+    display: flex;
+    justify-content: space-between;
+    height: 250px;
+    padding: 30px;
+    padding-left: 13%;
+    color: #067092;
+    border: 1px solid #00F3FF;
+    margin: 30px 0;
+}
+
+
+.timer {
+    /* background-color: yellow; */
+    width: 50%;
+    padding: 10px;
+    font-family: 'nums';
+    font-size: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+    
+}
+
+.time_counter {
+    display: flex;
+    /* width: 90%; */
+    /* margin: 0 auto; */
+    position: relative;
+    /* flex-direction: column; */
+    justify-content: flex-start;
+    /* text-align: center; */
+    
+    
+}
+
+.fake_timecounter {
+    display: none;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: black;
+    
+    
+
+}
+
+
+
+
+
+
+
+.results {
+    /* background-color: orange; */
+    height: 100%;
+    width: 50%;
+}
+
+.start,.loop,.stop,.reset {
+    width: 70px;
+    height: 30px;
+    font-size: 18px;
+    border: 1px solid  #067092;
+    font-family: 'nums';
+    background-color: black;
+    color: #067092;
+    outline: none;
+    box-shadow: 0;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-top: 10px;
+    
+    
+
+}
+
+
+
+.result_area {
+
+    width: 40%;
+    margin: 0 auto;
+    height: 100%;
+    border: 1px solid #00F3FF;
+    /* background-color: white; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+    font-size: 25px;
+    font-family: 'nums';
+    padding: 10px;
+    direction: rtl;
+
+}
+
+.result_area::-webkit-scrollbar {
+    width: 0;
+}
+
+
+.buttons {
+   display: flex;
+   justify-content: flex-start;
+   flex-wrap: wrap;
+   /* margin-top: 20px; */
+}
+
+
+.reverse_timer {
+    height: 250px;
+    padding: 30px;
+    color: #067092;
+    border: 1px solid #00F3FF;
+    
+    font-size: 50px;
+    display: flex;
+    
+
+    
+}
+
+
+.block_counter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+    justify-content: center;
+}
+
+.count {
+    display: flex;
+}
+
+.count_buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.count_increase,.count_decrease {
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    border: 1px solid  #067092;
+    font-family: 'nums';
+    background-color: black;
+    color: #067092;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+
+
+.block_reverse_count {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+
+}
+
+.reverse_timer_counter {
+    display: flex;
+}
+
+.reverse_timer_counter_settings {
+    display: flex;
+    
+    justify-content: center;
+    
+}
+
+.reverse_timer_counter {
+    font-size: 80px;
+}
+
+
+.reverse_timer_start,.reverse_timer_stop,.reverse_timer_reset {
+    width: 70px;
+    height: 30px;
+    font-size: 18px;
+    border: 1px solid  #067092;
+    font-family: 'nums';
+    background-color: black;
+    color: #067092;
+    outline: none;
+    box-shadow: 0;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 3px;
+}
+
+.test {
+    border: 1px solid blck;
+    height: 200px;
+    width: 100%;
+    margin-top: 20px;
+    background-color: #fff;
+    font-size: 50px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}

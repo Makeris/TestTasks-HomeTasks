@@ -1,0 +1,98 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: red;
+    padding-top: 50px;
+}
+
+.title {
+    text-align: center;
+    color: white;
+    margin: 20px;
+    font-size: 40px;
+}
+
+.main {
+    width: 90%;
+    margin: 0 auto;
+    height: 70vh;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    flex-wrap: wrap;
+}
+
+.puzzles,.picture {
+
+    /* min-width: 500px; */
+    width: 49%;
+    height: 100%;
+    background-color: gray;
+    border: 1px solid #000;
+    border-radius: 5px;/* position: relative; */
+    /* overflow: hidden; */
+    
+}
+
+.puzzles_block {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    /* justify-content: center; */
+    align-content: center;
+}
+
+.puzzle_item {
+    /* position: absolute; */
+    height: 67px;
+    width: 100px;
+    background-color: red;
+    /* border: 1px solid #000; */
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+}
+
+.puzzle_item:nth-child(1) {
+    background-image: url(images/1_01.jpg);
+    order: 2;
+}
+.puzzle_item:nth-child(2) {
+    background-image: url(images/1_02.jpg);
+    order: 1;
+}
+.puzzle_item:nth-child(3) {
+    background-image: url(images/1_03.jpg);
+    order: 7;
+}
+.puzzle_item:nth-child(4) {
+    background-image: url(images/1_04.jpg);
+    order: 3;
+}
+.puzzle_item:nth-child(5) {
+    background-image: url(images/1_05.jpg);
+    order: 5;
+}
+.puzzle_item:nth-child(6) {
+    background-image: url(images/1_06.jpg);
+    order: 8;
+}
+.puzzle_item:nth-child(7) {
+    background-image: url(images/1_07.jpg);
+}
+.puzzle_item:nth-child(8) {
+    background-image: url(images/1_08.jpg);
+    order: 4;
+}
+.puzzle_item:nth-child(9) {
+    background-image: url(images/1_09.jpg);
+    order: 0;
+}
