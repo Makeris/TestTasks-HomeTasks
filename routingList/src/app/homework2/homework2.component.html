@@ -1,0 +1,72 @@
+<div style="font-size: 40px; font-weight: 500; background-color: lightgray; padding: 10px; text-align: center;" class="header">ANGULAR list of previous tasks</div>
+
+<div  style="display: flex;width: 50%; margin: 0 auto; padding: 5px;">
+    <!-- <p>Last works >></p> -->
+    <div style="margin: 0 auto; background-color: #fff;" class="card-header text-center">
+      <ul class="nav nav-tabs card-header-tabs">
+        <li class="nav-item">
+          <a [routerLink]="[ '/cenzor']" routerLinkActive = 'active' style="padding: 5px;" class="nav-link" aria-current="true" href="#">Cenzor</a>
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="[ '/homework2']" routerLinkActive = 'active' style="padding: 5px;" class="nav-link" href="#">Tasks list</a>
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="[ '/homework1']" routerLinkActive = 'active' style="padding: 5px;" class="nav-link" href="#" tabindex="-1" aria-disabled="true">User list</a>
+        </li>
+      </ul>
+    </div>
+    <button [routerLink]="[ '/home']" class="btn btn-primary" type="button">Home Page</button>
+  </div>
+
+
+<h1 class="mt-3">Plan your day!</h1>
+<h2 class="mt-3">Count of tasks {{arrTasks.length}}</h2>
+
+<hr>
+
+<form class="f1" name="mainForm" style="padding: 15px;">
+
+
+    <div style="display: flex;">
+
+        <input [(ngModel)]="addNewTask" name="addNewTask1" type="text" class="form-control">
+       
+        <button (click)="addItem()" style="margin-left: 10px; width: 100px;" class="btn btn-success">Add</button>
+    </div>
+
+
+
+    <table class="table mt-4">
+        <thead>
+            <th>#</th>
+            <th>Task</th>
+            <th>Check</th>
+            <th>Done/In progress</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let tasks of arrTasks; let i=index">
+                <td>{{i+1}}</td>
+                <td>{{tasks}}</td>
+                <td>
+                    <input (change)="checker($event,i)" class="form-check-input" name="checkbox" type="checkbox" value="" id="flexCheckDefault">
+                </td>
+                <td [ngStyle]="{'color': color}" style="font-weight: 600;" class="status">{{inProgress}}</td>
+                <td>
+                    <button (click)="editItem(i)" class="btn btn-warning" type="button">Edit</button>
+                </td>
+                <td>
+                    <button [disabled]='isEdited' (click)="deleteItem(i)" class="btn btn-danger" type="button" >Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div *ngIf="isEdited" class="bottomField mt-2" style="width: 50%; margin: 0 auto; display: flex;">
+        <input [(ngModel)]="saveItem" name="saveItem1" type="text" class="form-control">
+        <button (click)="replaceItem()" class="btn btn-primary" style="margin-left: 10px;">Save</button>
+    </div>
+</form>
+

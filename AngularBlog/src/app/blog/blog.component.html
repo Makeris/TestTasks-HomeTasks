@@ -1,0 +1,14 @@
+<div class="main_blog">
+    <div *ngFor="let item of arrOfPosts" class="main_blog_item">
+       <img src="" [src]="item.image" class="card-img-top">
+        <div style="display: flex; justify-content: space-between; align-items: center;" class="mt-1 card_description">
+            <div class="card_date">{{item.date | date: 'longDate'}}</div>
+            <div class="card_name">{{item.autor}}</div>
+        </div>
+        <h4 class="card_title">{{item.title}}</h4>
+        <div class="card_text">{{item.text}}</div>
+        
+    </div>
+
+
+</div>

@@ -1,0 +1,44 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 2,
+      "title": "json-server",
+      "author": "they"
+    },
+    {
+      "id": 3,
+      "title": "json-server",
+      "author": "you"
+    },
+    {
+      "id": 4,
+      "title": "json-server",
+      "author": "we"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "adminPosts": [
+    {
+      "id": 1,
+      "date": "2021-03-25T16:44:38.591Z",
+      "autor": "Somebody",
+      "title": "BMW",
+      "text": "BMW e38 750di",
+      "image": "https://de.med-auto.com/uploads/img/bmv_750_e38_nestareyushaya_klassika_po_dostupnoj_cene_aa.jpg"
+    }
+  ]
+}

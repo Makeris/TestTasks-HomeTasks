@@ -1,0 +1,46 @@
+<div class="admin_blog_main">
+    <div class="admin_aside" style="background-color: #fff;"></div>
+
+    <!-- /////////////////////////////////////////////////// -->
+    <div class="admin_settings" style="background-color: white;">
+        <input [(ngModel)]="adminTitle" name="adminTitle" type="text" class="form-control admin_title_input mt-3 mb-3" placeholder="Title here..">
+        <textarea [(ngModel)]="adminTextarea" name="adminTextarea" cols="30" rows="5"type="text" class="mt-3 mb-3 form-control admin_text_input" placeholder="Text here.."></textarea>
+        <input [(ngModel)]="adminAutor" name="adminAutor" type="text" class="form-control admin_autor_input mt-3 mb-3" placeholder="Autor here..">
+        <button *ngIf="confirmChanges == false" (click)="addPostBtn()"  type="button" class="btn btn-dark mb-3">Add</button>
+        <button *ngIf="confirmChanges" (click)="savePostBtn(indexOfChangedItem)" type="button" class="btn btn-primary mb-3">Save</button>
+        
+        <table class="table">
+            <thead>
+                    <th>#</th>
+                    <th>Title</th>
+                    <th>Text</th>
+                    <th>Date</th>
+                    <th>Autor</th>
+                    <th>Edit</th>
+                    <th>Delete</th>    
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let post of arrBlogs; let i = index">
+                    <td>{{i + 1}}</td>
+                    <td>{{post.title}}</td>
+                    <td>{{post.text}}</td>
+                    <td>{{post.date | date: 'longDate'}}</td>
+                    <td>{{post.autor}}</td>
+                    <td>
+                        <button (click)="editPostBtn(post, i)" class="btn btn-warning" type="button">Edit</button>
+                    </td>
+                    <td>
+                        <button (click)="deletePostBtn(post)" class="btn btn-danger" type="button">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+
+
+    <!-- /////////////////////////////////////////////////// -->
+
+
+</div>

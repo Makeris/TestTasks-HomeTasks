@@ -1,0 +1,36 @@
+<div style="font-size: 40px; font-weight: 500; background-color: lightgray; padding: 10px; text-align: center;" class="header">ANGULAR list of previous tasks</div>
+
+<div  style="display: flex;width: 50%; margin: 0 auto; padding: 5px;">
+    <!-- <p>Last works >></p> -->
+    <div style="margin: 0 auto; background-color: #fff;" class="card-header text-center">
+      <ul class="nav nav-tabs card-header-tabs">
+        <li class="nav-item">
+          <a [routerLink]="[ '/cenzor']" routerLinkActive = 'active' style="padding: 5px;" class="nav-link" aria-current="true" href="#">Cenzor</a>
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="[ '/homework2']" routerLinkActive = 'active' style="padding: 5px;" class="nav-link" href="#">Tasks list</a>
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="[ '/homework1']" routerLinkActive = 'active' style="padding: 5px;" class="nav-link" href="#" tabindex="-1" aria-disabled="true">User list</a>
+        </li>
+      </ul>
+    </div>
+    <button [routerLink]="[ '/home']" class="btn btn-primary" type="button">Home Page</button>
+
+</div>
+
+<div class="main mt-4">
+    <div class="main_words">
+        <div class="main_words_title">Bad words: </div>
+        <div *ngFor="let words of badWordsArr" class="main_words_list">
+            <span>{{words}}</span>
+        </div>
+    </div>
+    <div class="words_editer">
+        <input type="text" [(ngModel)]="addWord"  name="addWord" id="" placeholder="Word here..." class="form-control addWord" style="padding-left: 10px ;">
+        <button [disabled]="addWord.length < 1" (click)="addNewWord()" type="button" class="btn btn-success addBtn">Add</button>
+        <button [disabled]="badWordsArr.length < 1" (click)="resetWords()" type="button" class="btn btn-warning resetBtn">Reset</button>
+    </div>
+    <textarea [(ngModel)]="textarea" id="textarea" cols="30" rows="10" style="padding: 10px;"></textarea>
+    <button [disabled]="textarea.length < 1" style="height: 35px; margin: 0 auto;" (click)="cenzor()" type="button" class="btn btn-success cenzorBtn">Cenzor</button>
+</div>

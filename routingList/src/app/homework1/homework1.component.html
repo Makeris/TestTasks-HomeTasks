@@ -1,0 +1,63 @@
+<!-- <p>homework1 {{name}} works!</p> -->
+<!-- node_modules\bootstrap\dist\css\bootstrap.min.css -->
+
+<!-- <p>{{arr[0]}}</p> -->
+<div style="font-size: 40px; font-weight: 500; background-color: lightgray; padding: 10px; text-align: center;" class="header">ANGULAR list of previous tasks</div>
+
+<div  style="display: flex;width: 50%; margin: 0 auto; padding: 5px;">
+    <!-- <p>Last works >></p> -->
+    <div style="margin: 0 auto; background-color: #fff;" class="card-header text-center">
+      <ul class="nav nav-tabs card-header-tabs">
+        <li class="nav-item">
+          <a [routerLink]="[ '/cenzor']" routerLinkActive = 'active' style="padding: 5px;" class="nav-link" aria-current="true" href="#">Cenzor</a>
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="[ '/homework2']" routerLinkActive = 'active' style="padding: 5px;" class="nav-link" href="#">Tasks list</a>
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="[ '/homework1']" routerLinkActive = 'active' style="padding: 5px;" class="nav-link" href="#" tabindex="-1" aria-disabled="true">User list</a>
+        </li>
+      </ul>
+    </div>
+    <button [routerLink]="[ '/home']" class="btn btn-primary" type="button">Home Page</button>
+
+</div>
+
+<main class="main">
+
+    <form class="form mt-3 mb-3">
+        <input [(ngModel)]="newName" name="newName" placeholder="Type name" type="text" class="form-control" id="">
+        <input [(ngModel)]="newSName" name="newSName" placeholder="Type last name..." type="text" class="form-control mt-3 mb-3" id="">
+        <input [(ngModel)]="newEmail" name="newEmail" placeholder="Type email..." type="email" class="form-control" id="">
+        <button *ngIf="isAdd" (click)="addName()" (click)="addSName()" (click)="addEmail()" type="button" class="btn btn-block btn-success mt-3">Add</button>
+        <button *ngIf="isEdit" (click)="saveName()" type="button" class="btn btn-block btn-primary mt-3">Save Edit</button>
+    </form>
+    
+    
+    <table class="table">
+        <thead>
+    
+            <th>#</th>
+            <th>Name</th>
+            <th>Last name</th>
+            <th>Email</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let name of arrNames; let i=index">
+                <td>{{i+1}}</td>
+                <td>{{name}}</td>
+                <td>{{arrSnames[i]}}</td>
+                <td>{{arrEmails[i]}}</td>
+                <td>
+                    <button (click)="editName(i)" class="btn btn-warning" type="button">EDIT</button>
+                </td>
+                <td>
+                    <button (click)="deleteItem(i)" class="btn btn-danger" type="button">DELETE</button>
+                </td>
+            </tr>
+        </tbody>
+    
+    </table>
+</main>
